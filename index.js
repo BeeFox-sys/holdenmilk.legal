@@ -6,14 +6,13 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 const { Liquid } = require("liquidjs");
-const { query } = require("express");
 const engine = new Liquid({
     cache: process.env.NODE_ENV === "PROD",
     extname: ".html" 
 });
 
 app.engine("html", engine.express()); 
-app.set("views", __dirname+"\\views");
+app.set("views", __dirname+"/views");
 app.set("view engine", "liquid");
 
 app.use(express.static("static"));
@@ -30,10 +29,13 @@ app.get("/client", async (req,res)=>{
 
     switch (req.query.username) {
         case "gunther_obrian":
-                if(req.query.password != "abc123") return res.render("fail.html");
-                res.render("clients\\gunther_obrian.html",)
-            break;
-    
+            if(req.query.password != "🐧") return res.render("fail.html");
+            res.render("clients/gunther_obrian.html",)
+        break;
+        case "ch_shoethieves":
+            if(req.query.password != "whatareyouacop") return res.render("fail.html");
+            res.render("clients/ch_shoethieves.html",)
+        break;
         default:
             res.render("fail.html")
             break;
