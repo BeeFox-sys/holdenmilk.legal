@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+
+body{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-family: 'Lora', serif;
+    padding-bottom: 1em;
+}
+
+.nav{
+    background-color: #1E91CC;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    place-items: center;
+    align-items: center;
+    height: 10em;
+    padding: 2em 15em;
+    color: white;
+}
+
+.nav h1{
+    display: inline-block;
+    margin: 0;
+    padding: 0.2em;
+}
+.nav a{
+    grid-column: 3;
+    justify-content: baseline;
+    padding-right: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.content{
+    padding: 0.3em 8em;
+    text-align: center;
+}
+
+.banner{
+    background-color: #1E91CC;
+    color: white;
+    font-weight: 900;
+    height: 5em;
+    place-content: center;
+}
+
+.chat{
+    background-color: #eee;
+    text-align: left;
+    padding: 0.3em 3em;
+}
+
+.chat h2{
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+.chat p{
+    margin-top: 0.3em;
+}
+
+.chat hr{
+    color: #ccc
+}

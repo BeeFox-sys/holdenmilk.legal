@@ -1,0 +1,9 @@
+{% layout "layouts/default.html" %}
+{% block content %}
+<form action="/client" method="get">
+    Username: <input id=username name=username type=text><br>
+    Password: <input id=password name=password type=text><br>
+    <input type="submit" value="Login">
+</form>
+
+{%endblock%}
