@@ -111,3 +111,8 @@ img{
     margin: auto;
     border-radius: 20px;
 }
+
+.redact{
+    background-color: black;
+    color: black;
+}
