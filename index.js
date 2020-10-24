@@ -26,7 +26,7 @@ app.get("/login",async (req, res)=>{
 
 app.get("/client", async (req,res)=>{
     if(!req.query?.username || !req.query?.password) res.render("fail.html")
-
+    console.log(`u: ${req.query.username}, p: ${req.query.password}`)
     switch (req.query.username) {
         case "gunther_obrian":
             if(req.query.password != "🐧") return res.render("fail.html");
