@@ -33,7 +33,7 @@ app.get("/client", async (req,res)=>{
         if (err) throw err;
         console.log('Saved!');
       });
-    switch (req.query.username) {
+    switch (req.query.username.toLowerCase()) {
         case "gunther_obrian":
             if(req.query.password != "🐧") return res.render("fail.html");
             res.render("clients/gunther_obrian.html",)
