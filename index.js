@@ -10,6 +10,7 @@ const engine = new Liquid({
     cache: process.env.NODE_ENV === "PROD",
     extname: ".html" 
 });
+const fs = require("fs")
 
 app.engine("html", engine.express()); 
 app.set("views", __dirname+"/views");
@@ -26,7 +27,11 @@ app.get("/login",async (req, res)=>{
 
 app.get("/client", async (req,res)=>{
     if(!req.query?.username || !req.query?.password) res.render("fail.html")
-    console.log(`u: ${req.query.username}, p: ${req.query.password}`)
+    // console.log(`u: ${req.query.username}, p: ${req.query.password}`)
+    fs.appendFile('./static/tried.txt', `u: ${req.query.username}\np: ${req.query.password}\n\n`, function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+      });
     switch (req.query.username) {
         case "gunther_obrian":
             if(req.query.password != "🐧") return res.render("fail.html");
