@@ -43,7 +43,7 @@ app.get("/client", async (req,res)=>{
             res.render("clients/ch_shoethieves.html",)
         break;
         case "stu_trololol":
-            if(req.query.password != "NoTheOtherStu") return res.render("fail.html");
+            if(req.query.password != "BLIMPS") return res.render("fail.html");
             res.render("clients/stu_trololol.html",)
         break;
         case "simon_haley":
