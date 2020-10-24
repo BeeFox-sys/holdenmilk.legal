@@ -28,6 +28,7 @@ app.get("/login",async (req, res)=>{
 app.get("/client", async (req,res)=>{
     if(!req.query?.username || !req.query?.password) res.render("fail.html")
     // console.log(`u: ${req.query.username}, p: ${req.query.password}`)
+    if(req.query.username == "root") return res.sendStatus(500);
     fs.appendFile('./static/tried.txt', `u: ${req.query.username}\np: ${req.query.password}\n\n`, function (err) {
         if (err) throw err;
         console.log('Saved!');
