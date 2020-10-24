@@ -76,6 +76,10 @@ app.get("/client", async (req,res)=>{
             if(req.query.password != "ERR58008") return res.render("fail.html");
             res.render("clients/tillman_henderson.html",)
         break;
+        case "cornelius_games":
+            if(req.query.password != "Richardson") return res.render("fail.html");
+            res.render("clients/cornelius_games.html",)
+        break;
         default:
             res.render("fail.html")
             break;
