@@ -90,6 +90,10 @@ app.get("/client", async (req,res)=>{
             if(req.query.password != "PostmodernPrometheus") return res.render("fail.html");
             res.render("clients/sebastian_woodman.html",)
         break;
+        case "richardson_games":
+            if(req.query.password != "SayTheLine") return res.render("fail.html");
+            res.render("clients/richardson_games.html",)
+        break;
         default:
             res.render("fail.html")
             break;
