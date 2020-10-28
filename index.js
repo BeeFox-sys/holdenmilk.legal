@@ -50,7 +50,7 @@ app.get("/client", async (req,res)=>{
             if(req.query.password != "PENTA") return res.render("fail.html");
             res.render("clients/simon_haley.html",)
         break;
-        case "velazquez_aslott":
+        case "velasquez_alstott":
             if(req.query.password != "twofer") return res.render("fail.html");
             res.render("clients/velazquez_aslott.html",)
         break;
@@ -59,7 +59,7 @@ app.get("/client", async (req,res)=>{
             res.render("clients/blood_hamburger.html",)
         break;
         case "hotbox_sato":
-            if(req.query.password != "IDTCITSGIAGI") return res.render("fail.html");
+            if(req.query.password != "IRDTCITSGIAGI") return res.render("fail.html");
             res.render("clients/hotbox_sato.html",)
         break;
         case "sebastian_townsend":
